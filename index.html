@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BÉ TẬP TÍNH</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">     
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <!-- jQuery and JS bundle w/ Popper.js -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+         
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>
+                    BÉ TẬP TÍNH
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-9">
+                    <form name="frm">
+                        <div class="container">
+                            <div class="row">
+                                <label class="col-sm-3">Số thứ nhất</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="text" name="firstNum" placeholder="Nhập số thứ nhất" required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <label class="col-sm-3">Số thứ hai</label>
+                                <div class="col-sm-9">          
+                                    <input class="form-control" type="text" placeholder="Nhập số thứ hai" name="secondNum" required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <label class="col-sm-3">Kết quả</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="text" id="result"/>     
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <label class="col-sm-3">Thông báo</label>
+                                <div class="col-sm-9">
+                                    <small id="error1">
+                                        Giá trị nhập ở ô <i>Số thứ nhất</i> hoặc <i>Số thứ hai</i> không phải là số thực.
+                                      </small>
+
+                                      <small id="error2">
+                                        Bấm nút Tính mà chưa chọn phép tính.
+                                      </small>
+            
+                                      <small id="error3">
+                                        Chưa điền đủ hai số hợp lệ để thực hiện phép tính.
+                                      </small>
+                                      <div id="error"></div>
+                                </div>
+                            </div>
+                        </div>                          
+                    </form>
+                </div>
+
+                <div class="col-sm-3">
+                    <form name="frm2">
+                        <div class="form-check form-check-inline">
+                            <input value="+" type="radio" class="form-check-input" id="radio1" name="calc" value="option1">  
+                            <label class="form-check-label">Cộng</label>  
+                            <input value="-" type="radio" class="form-check-input" id="radio2" name="calc" value="option2">
+                            <label class="form-check-label">Trừ</label>
+                        </div>
+                        <br />
+
+                        <div class="form-check form-check-inline">
+                            <input value="*" type="radio" class="form-check-input" id="radio3" name="calc" value="option3">     
+                            <label class="form-check-label">Nhân</label>
+                            <input value="/" type="radio" class="form-check-input" id="radio4" name="calc" value="option4">  
+                            <label class="form-check-label">Chia</label>
+                        </div>
+                        <button type="submit" onclick="doMath();">TÍNH</button>
+                    </form>                        
+                </div>                
+            </div>
+        </div>
+    </body>
+</html>
